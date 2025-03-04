@@ -1,0 +1,6 @@
+.app-main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 92px;
+  /* margin: 0 50px 0 50px; */
+}

@@ -1,0 +1,74 @@
+/* === TRANSFORMATIONS SECTION === */
+.character-transformations {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 48px;
+}
+
+/* === SCROLLABLE LIST === */
+.character-transformations-list {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  /* padding-bottom: 16px; */
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+/* Oculta la barra en Webkit (Chrome, Safari) */
+.character-transformations-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.character-transformations-list::-webkit-scrollbar-thumb {
+  background: #888;
+  /* border-radius: 4px; */
+}
+
+.character-transformations-list article {
+  flex: 0 0 168px;
+  width: 168px;
+  height: 320px;
+  background-color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px;
+}
+
+.character-transformations-list figure {
+  width: 168px;
+  height: 250px;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.character-transformations-list img {
+  width: 168px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.character-transformations-list footer {
+  color: #fff;
+  width: 100%;
+}
+
+.transformation {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ki {
+  font-size: 14px;
+}
