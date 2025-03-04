@@ -1,6 +1,6 @@
 .list-characters {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  margin: 48px;
+  gap: var(--spacing-lg);
+  margin: clamp(16px, 5vw, 48px);
 }

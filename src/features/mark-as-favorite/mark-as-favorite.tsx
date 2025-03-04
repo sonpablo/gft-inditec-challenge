@@ -1,6 +1,6 @@
-import { useFavorites } from '../../hooks/use-favorites/use-favorites';
-import heartDefault from '../../../../assets/heart-default.svg?url';
-import heartUnselected from '../../../../assets/heart-unselected.svg?url';
+import heartDefault from '../../assets/heart-default.svg?url';
+import heartUnselected from '../../assets/heart-unselected.svg?url';
+import { useFavorites } from '../../hooks';
 
 import './mark-as-favorite.styles.css';
 type Props = {

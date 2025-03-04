@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { MarkAsFavorite } from '../mark-as-favorite/mark-as-favorite';
+import { MarkAsFavorite } from '../../../mark-as-favorite/mark-as-favorite';
 import './character.style.css';
 type Props = {
   name: string;
@@ -14,11 +14,11 @@ export const CharacterCard = (props: Props) => {
   return (
     <article className="character-card">
       <Link to={linkTo} className="character-card">
-        <figure className="character-card-figure">
-          <img className="character-card-img " src={imageUrl} alt={name} />
+        <figure>
+          <img src={imageUrl} alt={name} />
         </figure>
       </Link>
-      <footer className="character-card-footer">
+      <footer>
         <p>{name}</p>
         <MarkAsFavorite characterId={characterId} />
       </footer>

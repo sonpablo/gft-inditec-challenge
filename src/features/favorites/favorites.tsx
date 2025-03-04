@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 import { Spinner } from '../../components';
-import { Characters, FormUsers } from '../list-db-characters/components';
-import { useDBCharacters } from '../list-db-characters/hooks/use-db-character/use-db-character';
-import { useFavorites } from '../list-db-characters/hooks/use-favorites/use-favorites';
+import { Characters, FormUsers } from '../list-characters/components';
+import { useFavorites, useDBCharacters } from '../../hooks';
+import { Character } from '../../models';
 
 export const Favorites = () => {
   const showFavorites = useRef<boolean>(true);
@@ -19,7 +19,9 @@ export const Favorites = () => {
 
   const filterCharacters = () => {
     if (showFavorites.current) {
-      return characters.filter((current) => state.includes(current.id));
+      return characters.filter((current: Character) =>
+        state.includes(current.id)
+      );
     }
 
     return characters;

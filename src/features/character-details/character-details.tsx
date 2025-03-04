@@ -1,9 +1,9 @@
 import { useParams, useNavigate } from 'react-router';
-import { useCharacter } from '../../hooks/use-character/use-character';
 import { Spinner } from '../../components';
-import './character-details.styles.css';
 import { Transformations } from './components/transformations/transformations';
 import { Favorite } from './components/favorite/favorite';
+import { useCharacter } from '../../hooks';
+import './character-details.styles.css';
 
 export const CharacterDetails = () => {
   const params = useParams();

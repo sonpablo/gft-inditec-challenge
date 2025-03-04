@@ -1,4 +1,4 @@
-import { Character } from '../../../../models/db-character';
+import { Character } from '../../../../models';
 import { CharacterCard } from '../character/character';
 import './characters.styles.css';
 

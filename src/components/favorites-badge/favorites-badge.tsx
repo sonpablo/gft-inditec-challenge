@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
-import { useFavorites } from '../../features/list-db-characters/hooks/use-favorites/use-favorites';
 import heartDefault from '../../assets/heart-default.svg?url';
 import heartUnselected from '../../assets/heart-unselected.svg?url';
+import { useFavorites } from '../../hooks';
 
 export const FavoritesBadge = () => {
   const { state } = useFavorites();

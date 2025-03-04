@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 16px;
+  justify-content: center;
 }
 
 @media (max-width: 1024px) {

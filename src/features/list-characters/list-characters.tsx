@@ -1,7 +1,7 @@
-import { Spinner } from '../../components/spinner/spinner';
+import { Spinner } from '../../components';
+import { useDBCharacters } from '../../hooks';
 import { Characters, FormUsers } from './components';
-import { useDBCharacters } from './hooks/use-db-character/use-db-character';
-import './list-db-characters.styles.css';
+import './list-characters.styles.css';
 
 export const ListDGCharacters = () => {
   const { characters, isLoading, getByName } = useDBCharacters();

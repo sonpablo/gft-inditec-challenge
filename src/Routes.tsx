@@ -1,8 +1,5 @@
 import { Routes, Route } from 'react-router';
-
-import { ListDGCharacters } from './features/list-db-characters/list-db-characters';
-import { CharacterDetails } from './features/character-details/character-details';
-import { Favorites } from './features/favorites/favorites';
+import { Favorites, CharacterDetails, ListDGCharacters } from './features';
 
 export const AppRoutes = () => (
   <Routes>

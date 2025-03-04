@@ -1,5 +1,6 @@
-import { Transformation } from '../../../models/db-character-details';
+import { Transformation } from '../../../../models';
 import './transformations.styles.css';
+
 type Props = {
   transformations: Transformation[];
   name: string;

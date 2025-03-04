@@ -40,7 +40,7 @@
   height: 100%;
   transform: scaleY(0.08);
   transform-origin: top center;
-  background: var(--Marvel-red, #ec1d24);
+  background: var(--color-danger);
 
   z-index: -1;
   transition: transform 0.3s;

@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
-import { CharacterResponse } from '../../../../models/db-character';
+import { Character, CharacterResponse } from '../../models';
 
 const fetchCharacters = async (): Promise<CharacterResponse> => {
   const res = await fetch('https://dragonball-api.com/api/characters?limit=50');
@@ -23,7 +23,7 @@ export const useDBCharacters = () => {
   };
 
   const characters = name
-    ? data?.items.filter((current) =>
+    ? data?.items.filter((current: Character) =>
         current.name.toLowerCase().includes(name.toLowerCase())
       )
     : data?.items;
