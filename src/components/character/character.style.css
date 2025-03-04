@@ -49,3 +49,6 @@
 .character-card:hover footer:after {
   transform: scaleY(1);
 }
+.character-card:hover .mark-as-favorite img {
+  filter: drop-shadow(0 0 2px white);
+}

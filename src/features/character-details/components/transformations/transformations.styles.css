@@ -1,4 +1,3 @@
-/* === TRANSFORMATIONS SECTION === */
 .character-transformations {
   display: flex;
   flex-direction: column;
@@ -6,25 +5,22 @@
   margin: 48px;
 }
 
-/* === SCROLLABLE LIST === */
 .character-transformations-list {
   display: flex;
   gap: 16px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  /* padding-bottom: 16px; */
+  padding-bottom: 16px;
   scrollbar-width: thin;
-  scrollbar-color: #888 transparent;
+  scrollbar-color: var(--color-danger) transparent;
 }
 
-/* Oculta la barra en Webkit (Chrome, Safari) */
 .character-transformations-list::-webkit-scrollbar {
   height: 8px;
 }
 
 .character-transformations-list::-webkit-scrollbar-thumb {
-  background: #888;
-  /* border-radius: 4px; */
+  background: var(--color-danger);
 }
 
 .character-transformations-list article {

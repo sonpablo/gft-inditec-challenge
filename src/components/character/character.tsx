@@ -1,11 +1,13 @@
 import { Link } from 'react-router';
-import { MarkAsFavorite } from '../../../mark-as-favorite/mark-as-favorite';
 import './character.style.css';
+import { MarkAsFavorite } from '../../features/mark-as-favorite/mark-as-favorite';
+
 type Props = {
   name: string;
   imageUrl: string;
   characterId: number;
 };
+
 export const CharacterCard = (props: Props) => {
   const { name, imageUrl, characterId } = props;
 

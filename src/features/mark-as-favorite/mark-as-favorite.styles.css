@@ -2,6 +2,11 @@ button {
   all: unset;
   cursor: pointer;
   margin: 4px;
-  width: 26px;
-  height: 26px;
+  width: 12px;
+  height: 12px;
+}
+
+button.large {
+  width: 24px;
+  height: 24px;
 }

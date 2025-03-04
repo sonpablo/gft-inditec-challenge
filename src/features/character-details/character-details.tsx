@@ -23,17 +23,21 @@ export const CharacterDetails = () => {
 
   return (
     <section>
-      <article className="character-resume">
-        <figure>
-          <img src={image} alt={name} />
-        </figure>
-        <aside>
-          <Favorite name={name} id={id!} />
-          <p>{description}</p>
-        </aside>
-      </article>
+      <div className="character-container">
+        <article className="character-resume">
+          <figure>
+            <img src={image} alt={name} />
+          </figure>
+          <aside>
+            <Favorite name={name} id={id!} />
+            <p>{description}</p>
+          </aside>
+        </article>
+      </div>
 
-      <Transformations transformations={transformations} name={name} />
+      <div className="transformations-container">
+        <Transformations transformations={transformations} name={name} />
+      </div>
     </section>
   );
 };

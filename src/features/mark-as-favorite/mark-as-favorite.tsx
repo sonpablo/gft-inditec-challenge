@@ -5,9 +5,10 @@ import { useFavorites } from '../../hooks';
 import './mark-as-favorite.styles.css';
 type Props = {
   characterId: number;
+  size?: 'small' | 'large';
 };
 export const MarkAsFavorite = (props: Props) => {
-  const { characterId } = props;
+  const { characterId, size = 'small' } = props;
   const { state, addFavorite, removeFavorite } = useFavorites();
 
   const isFavorite = state.some((current) => current === characterId);
@@ -23,7 +24,7 @@ export const MarkAsFavorite = (props: Props) => {
   };
 
   return (
-    <button onClick={handleClick}>
+    <button className={`mark-as-favorite ${size}`} onClick={handleClick}>
       <img src={image} alt="icon" />
     </button>
   );

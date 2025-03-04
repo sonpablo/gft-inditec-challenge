@@ -11,7 +11,7 @@ export const Favorite = (props: Props) => {
   return (
     <div className="favorite-container">
       <h1>{name}</h1>
-      <MarkAsFavorite characterId={Number(id)} />
+      <MarkAsFavorite characterId={Number(id)} size={'large'} />
     </div>
   );
 };
