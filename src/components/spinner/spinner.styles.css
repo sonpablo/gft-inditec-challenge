@@ -8,7 +8,7 @@ spinner-container {
 }
 .spinner {
   animation: spin 1s linear infinite;
-  border: 0.2em solid rgba(245, 175, 25, 0.1);
+  border: 0.2em solid rgb(245, 175, 25, 0.1);
   border-radius: 50%;
   border-left-color: #f12711;
   display: inline-block;

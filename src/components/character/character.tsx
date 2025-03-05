@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
-import './character.style.css';
 import { MarkAsFavorite } from '../../features/mark-as-favorite/mark-as-favorite';
+import './character.style.css';
 
 type Props = {
   name: string;

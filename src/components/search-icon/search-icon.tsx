@@ -1,4 +1,5 @@
 import { SVGProps } from 'react';
+
 export const SearchIcon = (props: SVGProps<SVGSVGElement>) => {
   const { width = 24, height = 24 } = props;
   return (

@@ -46,7 +46,7 @@
   .character-resume figure {
     margin: auto;
     overflow: hidden;
-    height: 500px;
+    max-height: 400px;
   }
   .character-resume img {
     width: 100%;

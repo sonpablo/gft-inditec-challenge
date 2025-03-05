@@ -1,5 +1,5 @@
-import { Character } from '../../models';
-import { CharacterCard } from '../character/character';
+import { CharacterCard } from '../../../../components/character/character';
+import { Character } from '../../../../models';
 import './characters.styles.css';
 
 export const Characters = (props: { characters: Character[] }) => {
