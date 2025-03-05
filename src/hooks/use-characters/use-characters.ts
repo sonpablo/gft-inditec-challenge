@@ -1,19 +1,24 @@
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 import { Character, CharacterResponse } from '../../models';
+import { apiFetch } from '../../lib/api-fetch';
 
-const fetchCharacters = async (): Promise<CharacterResponse> => {
-  const res = await fetch('https://dragonball-api.com/api/characters?limit=50');
-  if (!res.ok) throw new Error('Failed to fetch characters');
-  return res.json();
+const URL = 'https://dragonball-api.com/api/characters?limit=50';
+
+type UseCharactersReturn = {
+  characters: Character[];
+  isLoading: boolean;
+  error: Error | null;
+  getByName: (name: string) => void;
+  isSuccess: boolean;
 };
 
-export const useDBCharacters = () => {
+export const useCharacters = (): UseCharactersReturn => {
   const [name, setName] = useState<string>('');
 
   const { data, isLoading, error, isSuccess } = useQuery({
     queryKey: ['characters'],
-    queryFn: () => fetchCharacters(),
+    queryFn: () => apiFetch<CharacterResponse>(URL),
     staleTime: Infinity,
     gcTime: Infinity,
   });

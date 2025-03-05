@@ -1,16 +1,19 @@
 import { useQuery } from '@tanstack/react-query';
 import { CharacterDetails } from '../../models/db-character-details';
+import { apiFetch } from '../../lib/api-fetch';
 
-const fetchCharacters = async (id: string): Promise<CharacterDetails> => {
-  const res = await fetch(`https://dragonball-api.com/api/characters/${id}`);
-  if (!res.ok) throw new Error('Failed to fetch character');
-  return res.json();
+type UseCharacterReturn = {
+  character: CharacterDetails | undefined;
+  isLoading: boolean;
+  error: Error | null;
+  isError: boolean;
 };
 
-export const useCharacter = (id: string) => {
+export const useCharacter = (id: string): UseCharacterReturn => {
+  const url = `https://dragonball-api.com/api/characters/${id}`;
   const { data, isLoading, error, isError } = useQuery({
     queryKey: ['characters', id],
-    queryFn: () => fetchCharacters(id),
+    queryFn: () => apiFetch<CharacterDetails>(url),
     staleTime: Infinity,
     gcTime: Infinity,
   });

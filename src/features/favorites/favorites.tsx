@@ -1,13 +1,13 @@
 import { useRef } from 'react';
-import { Spinner } from '../../components';
 import { Characters, FormUsers } from '../list-characters/components';
-import { useFavorites, useDBCharacters } from '../../hooks';
+import { useFavorites, useCharacters } from '../../hooks';
 import { Character } from '../../models';
+import { Spinner } from '../../ui';
 
 export const Favorites = () => {
   const showFavorites = useRef<boolean>(true);
   const { state } = useFavorites();
-  const { characters, isLoading, getByName } = useDBCharacters();
+  const { characters, isLoading, getByName } = useCharacters();
 
   const handleSearch = (name: string) => {
     const hasName = !name;

@@ -1,7 +1,13 @@
 import { useContext } from 'react';
 import { FavoritesContext } from '../../providers/favorites-provider';
 
-export const useFavorites = () => {
+type UseFavoritesReturn = {
+  state: number[];
+  addFavorite: (id: number) => void;
+  removeFavorite: (id: number) => void;
+};
+
+export const useFavorites = (): UseFavoritesReturn => {
   const context = useContext(FavoritesContext);
 
   if (!context)

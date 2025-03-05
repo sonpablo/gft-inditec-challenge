@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router';
-import { Spinner } from '../../components';
+import { Spinner } from '../../ui';
 import { Transformations } from './components/transformations/transformations';
 import { Favorite } from './components/favorite/favorite';
 import { useCharacter } from '../../hooks';

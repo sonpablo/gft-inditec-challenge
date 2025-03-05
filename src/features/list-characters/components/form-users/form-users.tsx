@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Input, SearchIcon } from '../../../../components';
+import { Input, SearchIcon } from '../../../../ui';
 
 type Props = {
   onSearch: (name: string) => void;
