@@ -15,7 +15,11 @@ export const CharacterCard = (props: Props) => {
 
   return (
     <article className="character-card">
-      <Link to={linkTo} className="character-card">
+      <Link
+        to={linkTo}
+        className="character-card"
+        aria-label={`${name} character card`}
+      >
         <figure>
           <img src={imageUrl} alt={name} />
         </figure>
