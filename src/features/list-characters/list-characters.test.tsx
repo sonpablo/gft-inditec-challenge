@@ -2,7 +2,7 @@ import { screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { ListDGCharacters } from './list-characters';
 import { describe, expect, test } from 'vitest';
-import { customRender } from '../../test-utils/custom-render';
+import { customRender } from '../../test/test-utils/custom-render';
 
 describe('ListDGCharacters feature verification', () => {
   test('01 - should filter character list', async () => {

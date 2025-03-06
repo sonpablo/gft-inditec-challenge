@@ -1,7 +1,7 @@
 import { waitFor } from '@testing-library/react';
 import { useCharacter } from './use-character';
 import { describe, expect, test } from 'vitest';
-import { customRenderHook } from '../../test-utils/custom-render';
+import { customRenderHook } from '../../test/test-utils/custom-render';
 
 describe('useCharacter Hook verification', () => {
   test('01 - should return character data when the API call is successful', async () => {
