@@ -23,5 +23,14 @@ describe('ListDGCharacters feature verification', () => {
       expect(characterCards[0]).toHaveTextContent(/goku/i);
       expect(screen.getByText(/Results 1/i)).toBeInTheDocument();
     });
+
+    await userEvent.clear(searchInput);
+    await userEvent.keyboard('{enter}');
+
+    await waitFor(() => {
+      const characterCards = screen.getAllByRole('article');
+
+      expect(characterCards).toHaveLength(10);
+    });
   });
 });

@@ -8,6 +8,19 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     setupFiles: './src/setupTests.ts',
+    include: ['src/**/*.test.{ts,tsx}'],
+    reporters: ['default', 'html'],
+    coverage: {
+      all: true,
+      include: ['src/**/*.{ts,tsx}', '!src/**/*.test.{ts,tsx}'],
+      exclude: [
+        'src/mocks/**',
+        'src/test-utils/**',
+        'src/**/*.styles.css',
+        'src/main.tsx',
+        'src/vite-env.d.ts',
+      ],
+    },
   },
   build: {
     minify: 'terser',

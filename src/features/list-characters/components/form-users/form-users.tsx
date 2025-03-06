@@ -21,7 +21,7 @@ export const FormUsers = (props: Props) => {
     setSearchValue(event.target.value);
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} data-testid="form-users">
       <Input
         placeholder="Search a character"
         prefix={<SearchIcon />}
